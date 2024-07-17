@@ -1,75 +1,107 @@
-// Declaración de variables - reservo espacio de memoria
-// evitar usar var para declarar variables
+// //if (condicion) 
+// //  {lo que queremos que se ejecute
+// //  } 
 
-// var nombre = "Fabián";
-// console.log(nombre);
+// if (true) {
+//     console.log("Condición cumplida o verdadera")
+// }
 
-// var nombre = "Javascript";
-// console.log(nombre)
+// if (false) {
+//     console.log("condición no cumplida o falsa, no se imprime")
+// }
 
-// var nombre = "Javascript2";
-// console.log(nombre)
+// //Las booleanas también son variables primitivas
 
-//DECLARACIÓN Y DESIGNACIÓN
+// let V = true;
+// let F = false;
 
-//Empezamos a usar let para declarar variables
+// if (V) {
+//     console.log("Condición cumplida o verdadera usando V")
+// }
 
-//Declaración de variable - crear variable
-let userName;
+// const EDAD = 18;
+// const edadIngresada = prompt("Ingrese su edad:")
+// if (edadIngresada >= EDAD) {
+//     alert ("Puede ingresar")
+// } else {
+//     alert ("No puede ingresar")
+// }
 
-//Asignación de variable - asignar valor a la variable
-userName = "Fabian";
-console.log(userName);
+// //Condiciones anidadas if ... else if... else if
+// const PI = 3.14;
+// const ingreseUnValor = prompt ("Ingrese un número:")
+// if(ingreseUnValor < PI) {
+//     console.log("El número ingresado es menor a PI")
+// } else if (ingreseUnValor == PI) { 
+//     console.log("el número ingresado es igual a PI")
+// } else if (ingreseUnValor > PI) {
+//     console.log("El número ingresado es Mayor a PI")
+// } else {
+//     console.error("El dato ingresado no es un número")
+// }
 
-//Inicializar variable - crear variable con el valor designado
-let userPassword = "123456"; 
-console.log(userPassword)
+// //Ejemplo con string
 
-//CONST no se pueden reasignar sus valores
-const PI =3.14;
-const LETRA = 'A';
-const ESPACIO = " ";
+// let color = "Azul";
+// let ingreseUnColor = prompt("Ingrese un color")
 
-//OPERACIONES CON VARIABLES y/o CONSTANTES
+// if (ingreseUnColor == color) {
+//     console.log("El color ingresado es " + color)
+// } else {
+//     console.warn("El Color ingresado NO ES " + color)
+// }
 
-//Concatenación
-let variablesConcatenadas = userName + ESPACIO + userPassword;
-console.log(variablesConcatenadas)
-console.log(userName,userPassword) // deja un espacio entre string y string
+// //Tabla de verdad (lógica proposicional)
+// const V = true;
+// const F = false;
 
-//Operaciones matemáticas
+// console.log("Tabla de Verdad del Operador && (Y)")
+// console.log(V && V); //Si ambos son v => true
+// console.log(V && F); //Si al menos uno de los valores es f => false
+// console.log(F && V); //Si al menos uno de los valores es f => false
+// console.log(F && F); //Si ambos son F => false
 
-const UNO = 1
-const DOS = 2
-const TRES =3
-const CUATRO = 4
-const CINCO = 5
-const SEIS =6
-const SIETE =7
-const OCHO = 8
-const NUEVE =9
+// console.log("Tabla de Verdad del Operador || (O)")
+// console.log(V || V); //Si ambos son V => true
+// console.log(V || F); //Si al menos uno de los valores es V => true
+// console.log(F || V); //Si al menos uno de los valores es V => true
+// console.log(F || F); //Si ambos son F  => false
 
-let resultado;
+// console.log("Tabla de Verdad del Operador Negación (!)")
+// console.log(!V); //si no es Verdadero => false
+// console.log(!F); //si no es false => true
 
-//Suma
-resultado = DOS + TRES;
-console.log(resultado);
-//Resta
-resultado = CUATRO - TRES;
-console.log(resultado);
-//Multiplicación
-resultado = DOS * TRES;
-console.log(resultado);
-//División
-resultado = NUEVE / TRES;
-console.log(resultado);
+const VACIO = "";
+const ingreseUnNumeroPorPrompt= prompt("Ingrese un numero")
 
-//PROMPT, CONSOLA Y ALERT
-const textoPrevio = "El nombre ingresado es:"
-let nombreCompleto = prompt ("Ingrese su nombre");
-console.log(nombreCompleto);
-
-// En alert() a diferencia de console.log() no puedo usar , para concatenar
-alert (textoPrevio +ESPACIO+ nombreCompleto)
+if (ingreseUnNumeroPorPrompt == VACIO) {
+    console.warn("No ha ingresado nada")
+}else if (ingreseUnNumeroPorPrompt <=0){
+    console.warn("No se puede ingresar u valor negativo o igual a 0")
+}else if (ingreseUnNumeroPorPrompt >0 && ingreseUnNumeroPorPrompt <1){
+    console.log ("EeL NUMERO INGRESADO ESTA ENTRE 0 y 1")
+}else if (ingreseUnNumeroPorPrompt ==1 ){
+    console.log("Usted ingreso el 1")
+}else if (ingreseUnNumeroPorPrompt >1 && ingreseUnNumeroPorPrompt <=50){
+    console.log("El numero ingresado esta entre 1 y 50")
+}else if (ingreseUnNumeroPorPrompt >50){
+    console.log("El numero ingresado es mayor a 50")
+}else {
+    console.error ("El dato ingresado no es un numero")
+}
 
 
+//ACTIVIDAD EN CLASE:
+
+if(prompt("Ingreseun valor: ") > 1000){
+    alert ("Numero mayor a 1000")
+}
+
+if (prompt("Ingrese un texto: ")== "Hola"){
+    console.warn("hola")
+}
+
+const valor = prompt ("ingrese un valor");
+if ((valor >10 || valor == 10) && (valor <50 || valor ==50)) {
+    alert ("Aprobo")
+}
