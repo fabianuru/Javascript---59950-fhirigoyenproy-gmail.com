@@ -1,70 +1,76 @@
-//CICLOS E ITERACIONES
-// let i = 0
-// console.log(i)
+//Ejercicios Clase 2
 
-//FOR 
-// for (desde ; hasta; actualizacion) {
-//     lo que quiero que se ejecute
-// }
+// Variables y Constantes
 
-// for (let i = 0; i < 10; i++) {
-//     console.log("Se esta ejecutando un for hasta el " + i)
-// }
+// Declara una variable llamada nombre y asígnale tu nombre.
+let nombre = "Fabián"
 
+// Declara una constante llamada PI y asígnale el valor de π (pi).
+let pi = 3.14
 
-//Tabla del x
-// let ingreseUnNumero = parseInt(prompt("Ingrese un número"));
-// console.log("Tabla de Multiplicar del " + ingreseUnNumero)
-// for (let i=1; i <=10; i++) {
-//     let r = ingreseUnNumero * i;
-//     console.log(ingreseUnNumero + " x " +i+ " = " + r)
-// }
+// Booleanos
 
-//BREAK
-// for (let i = 1; i <=10; i++) {
-//     if (i==5) {
-//         break;
-//     }
-//     console.log("Los números son: " + i)
-// }
+// Declara una variable llamada esMayorDeEdad y asígnale true si tienes más de 18 años, o false si tienes 18 años o menos.
+let esMayorDeEdad = true
 
-//CONTINUE
-// for (let i = 1; i <=20; i++) {
-//     if (i==15) {
-//         continue ;
-//     }
-//     console.log("Los números son: " + i)
-// }
+// Prompt, Alert y Console.log
 
-// WHILE
-// let ingreseUnValor = prompt("Ingrese un número");
-// while(ingreseUnValor != 0) {
-//     console.log("El usuario ingreso: " + ingreseUnValor);
-//     ingreseUnValor = prompt ("ingrese un numero")
-// }
+// Pide al usuario que ingrese su edad utilizando prompt y almacena el valor en una variable llamada edadUsuario.
+let edadUsuario = parseInt(prompt("Ingrese su edad"))
 
-// DO WHILE 
-// let ingreseUnValor = prompt("Ingrese un numero")
-// do {
-//     console.log("El usuario ingreso: " + ingreseUnValor)
-//     ingreseUnValor= prompt("Ingrese otro valor");
-// } while (ingreseUnValor !=0)
+// Muestra un mensaje de alerta que diga "¡Hola!".
+alert ("!Hola!")
 
-//SWITCH
+// Imprime en la consola el mensaje "La edad ingresada es: [valor de edadUsuario]".
+alert("La edad ingresada es: " + edadUsuario)
 
-let ingreseSuNombre = prompt ("Ingrese su nombre")
+// Control de Flujo con if y if else
 
-while (ingreseSuNombre != "Chau") {
-switch(ingreseSuNombre) {
-    case "Alejandro": 
-    console.log("Su nombre es Alejandro");
-    break;
-    case "Javascript": 
-    console.log(ingreseSuNombre + " No es un nombre");
-    break;
-    default:
-    console.log ("nOS VEMOS en disney")
-    break;
+// Utilizando un if, verifica si un número ingresado por el usuario es positivo, negativo o cero, e imprime un mensaje correspondiente.
+if (edadUsuario > 0) {
+    console.log("El número es positivo.");
 }
-ingreseSuNombre = prompt ("Ingrese otro nombre")
+if (edadUsuario < 0) {
+    console.log("El número es negativo.");
 }
+if (edadUsuario === 0) {
+    console.log("El número es cero.");
+}
+// Utilizando un if else, verifica si un número ingresado por el usuario es par o impar, e imprime un mensaje correspondiente.
+if (edadUsuario%2===0){
+    console.log("El número es par")
+}else {
+    console.log("El número es impar")
+}
+
+// Utilizando un if else, verifica si un número ingresado por el usuario es mayor que 100, menor que 100 o igual a 100, e imprime un mensaje correspondiente.
+if (edadUsuario > 100 ){
+    console.log("La edad ingresada es mayor a 100")
+}else if (edadUsuario < 100){
+    console.log ("La edad ingresada es menor a 100")
+} else {
+    console.log("La edad ingresada es igual a 100")
+}
+
+// Operadores Lógicos
+
+// Utilizando operadores lógicos, verifica si un número ingresado por el usuario es divisible tanto por 2 como por 3.
+if ((edadUsuario%2===0) && (edadUsuario%3===0)) {
+    console.log("El número es divisible tanto por 2 como por 3")
+}
+
+// Utilizando operadores lógicos, verifica si un número ingresado por el usuario es mayor que 0 y menor que 100.
+if ((edadUsuario>0)&& (edadUsuario<100)){
+    console.log("El numero ingresado es mayor que 0 y menor que 100")
+}
+
+// Utilizando operadores lógicos, verifica si un número ingresado por el usuario es mayor que 10 o menor que -10.
+if ((edadUsuario>10)||(edadUsuario< -10)){
+    console.log("El numero ingresado es mayor que 10 o menor que -10")
+}
+
+// Ejercicios Adicionales
+// Pide al usuario que ingrese un número utilizando prompt, luego verifica si es un número primo e imprime un mensaje correspondiente.
+
+let numeroPrimo = parseInt(prompt("Ingrese un número"))
+
