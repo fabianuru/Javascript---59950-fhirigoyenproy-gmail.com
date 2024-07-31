@@ -1,161 +1,122 @@
-// let nombreProducto = "Azúcar";
-// let precioProducto = 1000;
-// let categoriaProducto = "Almacen";
+// const arrayDeNumerosVacio = [];
+// console.log(arrayDeNumerosVacio);
 
-// console.log(nombreProducto)
-// console.log(precioProducto)
-// console.log(categoriaProducto)
+// const arrayDeNumerosLleno = [1,2,3,89];
+// console.log(arrayDeNumerosLleno);
+// console.log(arrayDeNumerosLleno[3]) //acceder al 89
 
-// let nombreProducto1 = "yerba"
-// let precioProducto1="1200"
-// let categoriaProducto1="Almacen";
+// const arrayDeStrings = ["Hola", "a", "todos"];
+// console.log(arrayDeStrings)
 
-// console.log(nombreProducto1,precioProducto1,categoriaProducto1)
+// let calculoDeSuma = arrayDeNumerosLleno[3]+arrayDeNumerosLleno[5]
+// console.log(calculoDeSuma)
 
-// //Definir objeto producto
+// const arrayDeBooleanos= [true,false,false,true];
+// console.log(arrayDeBooleanos);
 
-// const producto1 = {
-//     nombre: "Azúcar",
-//     precio: 1000,
-//     categoria:"Almacen"
-// }
-// console.log(producto1)
-// console.log(producto1.nombre)
-// console.log(producto1.precio)
-// console.log(producto1.categoria)
-// console.table(producto1)
 
-// const producto2 = {
-//     nombre: "Yerba",
-//     precio:1200,
-//     categoria: "Almacen"
-// }
-// console.log(producto2)
-// console.log(producto2.nombre)
-// console.log(producto2["nombre"])
-// console.log(producto2.precio)
-// console.log(producto2["precio"])
-// console.log(producto2.categoria)
-// console.log(producto2["categoria"])
-
-// producto1.categoria = "dulces"; // reasignación de valor
-
-// console.log(producto1.categoria)
-
-//Constructor de objetos .OPCION 1
-// function Producto(nombre,precio,categoria){
-//     this.nombre = nombre;
-//     this.precio = precio;
-//     this.categoria = categoria;
+// //Recorrer el array
+// const arrayDeNumerosLleno = [1,2,3,89,8,8,39,40,32];
+// for (let i = 0; i < arrayDeNumerosLleno.length; i++){
+//     console.log("El indindice Nro: " +i+ " contiene el Elemento: " + arrayDeNumerosLleno[i])
 // }
 
-// const producto3 = new Producto("Azúcar",1000,"Almacen")
-// console.log(producto3)
+// // Ver longitud del array array.length
+// console.log("Hay " + arrayDeNumerosLleno.length + " de elemenos en este array");
 
-//Constructor de objetos. OPCION 2
+// //Agregar elementos al array
+// arrayDeNumerosLleno.push(123); //agrega al final
+// console.log(arrayDeNumerosLleno)
+// arrayDeNumerosLleno.unshift(123);// agrega al principio del array , no se recomienda
+// console.log(arrayDeNumerosLleno)
 
-// function Producto1 (objeto) {
-//     this.nombre = objeto.nombre;
-//     this.precio = objeto.precio;
-//     this.categoria = objeto.categoria;
-// }
+// //Eliminar elementos al array
+// arrayDeNumerosLleno.pop() // elimina el último elemento del array
+// console.log(arrayDeNumerosLleno)
+// arrayDeNumerosLleno.shift() // elimina el primer elemento del array
+// console.log(arrayDeNumerosLleno)
 
-// const producto5 = new Producto1({
-//     nombre: "yerba",
-//     precio: 1200,
-//     categoria:"almacen"
-// })
+// //Splice
+// arrayDeNumerosLleno.splice(4,2) //A partir del indice 4, borro 2 elementos.
+// console.log(arrayDeNumerosLleno)
 
-// console.log(producto5)
-
-
-// //Crear un auto
- 
-// function Auto (marca,color,precio,modelo,cilindraje){
-//     this.marca = marca;
-//     this.color= color;
-//     this.precio= precio;
-//     this.modelo=modelo;
-//     this.cilindraje=cilindraje;
-// }
-
-// const auto1 = new Auto ("chevrolet","negro",2500,"corsa","1.0");
-// const auto2 = new Auto ("Toyota", "",null , 2024, "1.8");
-// const auto3 = new Auto ("Ferrari",undefined,1000000,"6.0" )
+// //join concatena los elementos con lo que quieras
+// arrayDeStrings=["Hola","a","todos"]
+// console.log(arrayDeStrings.join(" / "))
+// console.log(arrayDeStrings.join("  "))
+// console.log(arrayDeStrings.join(" | "))
+// console.log(arrayDeStrings.join(""))
 
 
-// console.log(auto1)
-// console.log(auto2)
-// console.log(auto3)
+// //concatenar arrays
 
-//Diferencia entre funciones y metodos
+// const nombres1 = ["Sharon","Jose" ,"harold"];
+// const nombres2 = ["Juan","Fabian","Mario"];
 
-// function Auto (marca,color,precio,modelo,cilindraje){
-//     this.marca = marca;
-//     this.color= color;
-//     this.precio= precio;
-//     this.modelo=modelo;
-//     this.cilindraje=cilindraje;
-//     this.encender = function () {
-//         console.log("El auto esta encendido")
-//     }
-//     this.apagar = function () {
-//         console.log("El auto esta apagado")
-//     }
-// }
+// const nombresConcatenados =  nombres1.concat(nombres2)
+// console.log(nombresConcatenados);
 
-// const auto3 = new Auto ("Ford","Azul",100000,2024,"3.0");
-// auto3.encender();
-// auto3.apagar();
+// //Slice
+// const nuevoArrayConSlice = nombresConcatenados.slice(2,4);
+// console.log(nuevoArrayConSlice)
 
-// function Moto (marca,color,precio,modelo,cilindraje){
-//     this.marca = marca;
-//     this.color= color;
-//     this.precio= precio;
-//     this.modelo=modelo;
-//     this.cilindraje=cilindraje;
-//     this.encender = function () {
-//         console.log("La moto esta encendida")
-//     }
-//     this.apagar = function () {
-//         console.log("La moto esta apagada")
-//     }
-//     this.precioFinal = function (){
-//         this.precio = precio*1.21
-//     }
-// }
+// //indexOf devuelve el index de lo que busque
 
-// const moto1 = new Moto ("BMW", "Verde",12000,2022,"1.0")
-// moto1.encender();
-// moto1.apagar();
-// console.log(moto1)
-// moto1.precioFinal();
+// console.log(nuevoArrayConSlice.indexOf("Juan"));
+// console.log(nuevoArrayConSlice.indexOf("Sharon"));
 
+// //includes devuelve true or false si la busqueda esta en el array o no
 
-// console.log("marca" in auto3);
-// console.log("nombre" in auto3);
+// console.log(nuevoArrayConSlice.includes("Juan"));
+// console.log(nuevoArrayConSlice.includes("Sharon"));
 
-// for (const propiedad in auto3) {
-//     console.log(auto3[propiedad])
-// }
+// //reverse devuelve el array pero en el orden inverso
 
-//CLASES 
+// console.log(nuevoArrayConSlice.reverse());
 
-class Vehiculo {
-    constructor (marca,color,precio,modelo,cilindraje) {
-        this.marca = marca;
-        this.color=color;
-        this.precio =precio;
-        this.modelo = modelo;
-        this.cilindraje= cilindraje;
+// ARRAY DE OBJETOS
+
+const objeto1 = {nombre: "banana", precio: 1200};
+const objeto2= {nombre:"manzana", precio: 1450}
+
+const arrayDeObjetos = [objeto1,objeto2,{nombre: "frutilla",precio:1600}];
+console.log(arrayDeObjetos);
+
+arrayDeObjetos.push({nombre:"pera", precio: 1350});
+
+for (const frutas of arrayDeObjetos){
+    console.log(frutas.nombre);
+    console.log(frutas.precio)
+}
+
+class Producto {
+    constructor(nombre,precio,stock){
+        this.nombre = nombre.toUpperCase();
+        this.precio = parseFloat(precio);
+        this.stock = parseInt(stock);
     }
-    encender() {
-        console.log("El auto esta encendido")
+    sumarIva() {
+        this.precio = this.precio *1.22;
     }
-    apagar() {
-        console.log("El auto esta apagado")
+
+    mostrarNombre(){
+        console.log("El nombre de la fruta es: " + this.nombre)
     }
 }
 
-const auto = new Vehiculo("Ford","Azul",10000,2024,"3.0");
-console.log(auto);
+const productos = [];
+console.log(productos)
+productos.push(new Producto("Banana",1000.50,"12"));
+productos.push(new Producto("Mandarina",1500,"20"));
+productos.push(new Producto("Limon",1900,"15"));
+console.log(productos)
+
+
+for (const fruta of productos) {
+    fruta.sumarIva();
+}
+
+
+for (const fruta of productos) {
+    fruta.mostrarNombre();
+}
