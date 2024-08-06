@@ -1,70 +1,69 @@
-// //Funciones de orden superior
+//OBJET MATH 
 
-// //Abstracción
+// PI
+const PI = Math.PI;
+console.log(PI);
 
-// function cualquiera(){
-//     console.log("Hola mundi");
-// }
+// Numero de Euler
+const E = Math.E;
+console.log(E)
 
-// cualquiera();
+const A = -6.59;
+const B = 5.12;
+const C = 0.49;
 
-// //const suma =(a,b) => {
-// // return a+b ;
-// // }
-// // igual a la de arriba mas simple
-// const suma = (a,b) => a+b;
-// console.log(suma(5,6));
+//MIN & MAX 
+//min - Devuelve el número más chico
+// console.log(Math.min(-1,5,9,-500,1000,125,-236))
 
+//max - Devuelve el número más grande
+// console.log(Math.max(-1,5,9,-500,1000,125,-236))
 
-// //Funciones que retornan funciones
+//CEIL - REDONDEA EL SIGUIENTE ENTERO QUE TENGAS.  HACIA ARRIBA
+// console.log(PI)
+// console.log(Math.ceil(PI))
+// console.log(Math.ceil(A))
+// console.log(Math.ceil(B))
+// console.log(Math.ceil(C))
 
-// function mayorQue(n){
-//     return(m) => m > n;
-// }
+//FLOOR - REDONDEA PARA ABAJO 
+// console.log(Math.floor(PI))
+// console.log(Math.floor(A))
+// console.log(Math.floor(B))
+// console.log(Math.floor(C))
+// console.log(Math.floor(E))
 
-// const mayorQue = (n) => {
-//     return (m) => m > n;
-// }
+// //ROUND - REDONDEA AL MAS CERCANO , PARA ARRIBA Y PARA ABAJO
+// console.log(Math.round(PI))
+// console.log(Math.round(A))
+// console.log(Math.round(B))
+// console.log(Math.round(C))
+// console.log(Math.round(E))
 
-// let mayorQueDiez = mayorQue(10);
+//SQUARE ROOT - raiz cuadrada
+console.log(Math.sqrt(9))
 
-// console.log(mayorQueDiez(12)) // Compara si 12 es mayor que 10
-// console.log(mayorQueDiez(2)) // false
+//RAIZ CUBICA
+console.log(Math.cbrt(8))
 
+//POW - potencia 9^3
+console.log(Math.pow(9,3))
 
-//Otro ejemplo
+//RANDOM- Genera un numero pseudo aleatorio entre 0 y 1
+console.log(Math.random())
 
-// function asignarOperacion(operacion) {
-//     if (operacion=="suma") {
-//         return (a,b) => a+b
-//     }else if (operacion =="resta"){
-//         return (a,b) => a-b
-//     }else {
-//         return console.log("Debe ingresar suma o resta")
-//     }
-// }
+//Numeros entre 0 y 100
+console.log(Math.round((Math.random()*100))) 
 
-// const sumar = asignarOperacion("suma");
-// const restar = asignarOperacion("resta");
-
-// console.log(sumar (4,5))
-// console.log(restar(10,9))
-
-//Recibir funciones por parametros
-// function porCadaUno(array,funcion){
-//     for (const elemento of array){
-//         funcion(elemento);
-//     }
-// }
-
-// const numeros =[1,2,3,4,5,10];
-
-// porCadaUno(numeros,alert);
-
-// const segundoArray = [];
-
-// porCadaUno(numeros,(elemento)=>{
-//     segundoArray.push(elemento*3);
-// })
+//Numeros entre 100 y 200
+console.log(Math.round((Math.random()*100))+100)
 
 
+const generadorNum = () => Math.round(Math.random()*100);
+
+console.log(generadorNum());
+
+//10 numeros al azar
+for (let i = 0; i <=10; i++){
+    console.log(generadorNum())
+}

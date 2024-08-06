@@ -1,59 +1,48 @@
-//metodos de busqueda y transformación
+//CLASE DATE 
 
-const numeros =[1,2,3,4,5,10];
+new Date ();
 
-// numeros.forEach((numero)=>{
-//     console.log(numero);
-// })
+console.log(new Date ())// FECHA HOY HORA HOY
 
-const cursos = [
-    {
-    nombre:"JavaScript",estado: "Finalizado"
-    },
-    {
-    nombre: "React", estado:"cursando"
-    },
-    {
-    nombre: " fullstack", estado: "cursando"
-    }
-]
+// console.log(new Date (año,mes-1,dia,hora,minutos,segundos)) 
+console.log(new Date (1992,8,29,9,15,0));
+
+const miNacimiento =new Date (1992,8,29,9,15,0);
+const casiNavidad = new Date (2024,11,24,23,50,59)
+
+//Mostrar año actual
+const fechaActual = new Date()
+console.log(fechaActual.getFullYear())
+
+//Obtener solamente el año
+console.log(miNacimiento.getFullYear());
+
+//ObtenerSolo mes
+console.log(miNacimiento.getMonth());
+
+//Obtener el dia de la semana del new date
+console.log(miNacimiento.getDay());
+
+console.log(fechaActual.toLocaleString());
+console.log(fechaActual.toDateString());
+console.log(fechaActual.toLocaleDateString());
+console.log(fechaActual.toTimeString());
 
 
-//METODO FIND
-const resultado = cursos.find((elemento)=> elemento.nombre ==="JavaScript")
-console.log(resultado)
-const resultadoUndefined = cursos.find((elemento)=>elemento.nombre ==="Java")
-console.log(resultadoUndefined)
-const resultadoEstado = cursos.find((elemento)=> elemento.estado ==="cursando")
-console.log (resultadoEstado)
+//LA DIFERENCIA ENTRE FECHAS SE MIDE EN MILISEGUNDOS // cuantos milisegundos tiene un dia? // 86.400.000
 
-//METODO FILTER
-const resultado1 = cursos.filter((elemento) => elemento.nombre ==="JavaScript")
-console.log(resultado1)
-const resultadoEstado1 = cursos.filter((elemento)=> elemento.estado ==="cursando")
-console.log (resultadoEstado1)
+const MILISEGUNDOS_DIA = 24*60*60*1000;
+console.log(MILISEGUNDOS_DIA)
 
-//METODO SOME
-const resultado2 = cursos.some((elemento)=> elemento.some==="JavaScript")
-console.log(resultado2) // true
-const resultado3 = cursos.some((elemento)=> elemento.some==="phyton")
-console.log(resultado3) // false
+const arapeySando = new Date (2025,2,14,15,00,00)
+const DIFERENCIA = ((arapeySando - fechaActual) /MILISEGUNDOS_DIA)
+console.log(Math.round(DIFERENCIA))
 
-//METODO MAP
-const nombresDeCursos = cursos.map((elemento)=>elemento.nombre);
-console.log(nombresDeCursos)
+//Calcular el tiempo de ejecucion de un código
+// const INICIO = new Date();
+// for (i=0;i<=1000;i++){
+//     console.log("Programa Ejecutandose")
+// }
+// const FIN = new Date();
 
-const numerosDobles = numeros.map((elemento)=> elemento*2)
-console.log(numerosDobles)
-
-//METODO REDUCE
-
-const resultado5 = numeros.reduce((acumulador, elemento)=> acumulador + elemento, 0  ) 
-console.log(resultado5)
-
-//METODO SORT
-console.log(numeros)
-const resultado6 = numeros.sort((a,b)=> b-a)
-
-console.log(resultado6)
-
+// console.log("El proceso tardo " + (FIN-INICIO))
