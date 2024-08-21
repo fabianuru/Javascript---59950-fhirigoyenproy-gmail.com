@@ -1,62 +1,51 @@
-// // console.dir(document);
-// // console.log(document);
+//PARTE 2 - DESESTRUCTURACIÓN
 
-// // console.log(document.body)
-// // console.dir(document.body)
+const usuario = {
+    nombre: "Luciano",
+    edad:24,
+    cursos: {
+        desarrolloWeb: "Aprobado",
+        javascript: "En curso"
+    }
+}
 
-// //ACCESO A LOS NODOS
-// //getElementById("id")
-// console.log(document.getElementById("titulo"));
+const usuario2 = {
+    nombre: "Sharon",
+    edad:27,
+    cursos: {
+        desarrolloWeb: "Aprobado",
+        javascript: "En curso"
+    }
+}
 
-// //getElementsByClassName()
-// console.log(document.getElementsByClassName("contenedor"));
+// let nombre = usuario2.nombre
+// let edad = usuario2.edad
 
-// const contenedores = document.getElementsByClassName("contenedor");
+// console.log(nombre,edad);
 
-// console.log(contenedores[0])
-// console.log(contenedores[1])
-// console.log(contenedores[2])
-// console.log(contenedores[3])
-
-// //ACCEDER AL NODO TEXTO DEL TITULO
-// console.log(document.getElementById("titulo").innerText);
-// let titulo = document.getElementById("titulo").innerText;
-
-// //getElementsByTagName()
-// const main = document.getElementsByTagName("main")
-// console.log(main[0])
-
-// const secciones = document.getElementsByTagName("section")
-// console.log(secciones[0].innerHTML);
-
-// //MODIFICAR UN NODO
-
-// secciones[0].innerHTML = "<h2>Esta section fue actualizada </h2>"
-
-// for (const seccion of secciones) {
-//     console.log(seccion.innerHTML);
-// }
-
-let divAModificar = document.getElementById("parrafo");
-let parrafo = document.createElement("p"); 
-// parrafo.innerHTML= "esto es un parafo creado dinamicamente"
-
-// // console.log(parrafoAModificar);
-
-// //Agregar el parrafo al div id parrafo
-divAModificar.append(parrafo);
-
-// //Eliminar el parrafo 
-// parrafo.remove();
+// let {nombre,edad, telefono, cursos:{javascript, desarrolloWeb}} = usuario
+// console.log (nombre,edad, telefono, javascript, desarrolloWeb);
 
 
-let inputNombre = document.createElement("input");
-let inputEdad = document.createElement("input");
+//Alias
 
-divAModificar.appendChild(inputEdad);
-divAModificar.appendChild(inputNombre);
+// const {
+//     nombre:nombreAlias,
+//     edad:edadAlias
+// } = usuario2;
 
-inputNombre.id = "nombre"
-inputEdad.id ="edad"
-inputNombre.value = "Fabian"
-inputEdad.value = "31"
+// console.log(nombreAlias,edadAlias)
+
+const desestructurarObjetos =(objeto) => {
+    const {nombre,edad}= objeto;
+    console.log(nombre,edad);
+
+}
+
+desestructurarObjetos(usuario);
+
+const productos = ["Azúcar","Yerba","Café"];
+
+const [ , b, c] = productos;
+console.log(b);
+console.log(c);
